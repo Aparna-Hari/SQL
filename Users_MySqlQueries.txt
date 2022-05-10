@@ -1,0 +1,23 @@
+INSERT INTO users (first_name,last_name,email) VALUES('Brad','Reaves','bradr@email.com');
+INSERT INTO users (first_name,last_name,email) VALUES('Chris','Vogt','chrisv@email.com');
+INSERT INTO users (first_name,last_name,email) VALUES('Alex','Miller','alexm@email.com');
+
+SELECT * FROM users;
+
+-- Retrieve the first user using their email address --
+SELECT first_name,last_name FROM users WHERE email = 'bradr@email.com'; 
+
+-- Retrieve the last user using their id --
+SELECT first_name,last_name FROM users WHERE id = 3;
+
+-- Change the user with id=3 so their last name is Pancakes --
+UPDATE users SET last_name = 'pancakes' WHERE id = 3;
+
+-- Delete the user with id=2 from the database --
+DELETE FROM users WHERE id=2;
+
+-- Get all the users, sorted by their first name --
+SELECT * FROM users ORDER BY first_name;
+
+-- Get all the users, sorted by their first name in descending order --
+SELECT * FROM users ORDER BY first_name DESC
